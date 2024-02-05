@@ -82,7 +82,6 @@ class QueryStmt implements QueueStatementInterface
         $this->sql = null;
     }
 
-
     private function normalizeTemplate(string $template): string
     {
         return str_replace(
@@ -91,7 +90,6 @@ class QueryStmt implements QueueStatementInterface
             $template
         );
     }
-
 
     private function splitTemplate(): self
     {
@@ -121,7 +119,6 @@ class QueryStmt implements QueueStatementInterface
                 throw new QueryException('Неожиданное вхождение ' . $m[1] . ' в блоке: ' . $part);
             }
         }
-        
 
         return $this;
     }
